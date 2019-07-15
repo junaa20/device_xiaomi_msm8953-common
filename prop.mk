@@ -45,9 +45,9 @@ qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7 \
 ro.qualcomm.bt.hci_transport=smd
 
-# Build Version
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.build.version.release=11
+# Charger
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.charger.enable_suspend=true
 
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
