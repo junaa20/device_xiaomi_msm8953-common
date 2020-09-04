@@ -295,6 +295,8 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc \
     init.safailnet.rc 
+    init.camera.rc \
+    init.camera.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \

@@ -53,4 +53,41 @@
             android:title="@string/ambient_display_gestures_title" />
 
     </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/other_category" >
+        <SwitchPreference
+            android:key="fastcharge"
+            android:defaultValue="false"
+            android:title="@string/fastcharge_title"
+            android:icon="@drawable/ic_fastcharge"
+            android:summary="@string/fastcharge_summary" />
+
+        <com.xiaomi.parts.preferences.SecureSettingListPreference
+            android:summary="@string/camera_explanation_summary"
+            android:key="camera"
+            android:title="@string/camera_title"
+            android:summaryOn="@string/camera_hal3_summary"
+            android:summaryOff="@string/camera_hal1_summary"
+            android:icon="@drawable/ic_cam"
+            android:defaultValue="0"
+            android:dialogTitle="@string/camera_dialogTitle"
+            android:entries="@array/camera_profiles"
+            android:entryValues="@array/camera_values" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="spectrum_profile"
+        android:title="@string/spectrum_profile_title">
+
+
+        <com.xiaomi.parts.preferences.SecureSettingListPreference
+            android:defaultValue="0"
+            android:dialogTitle="@string/spectrum_dialogTitle"
+            android:entries="@array/spectrum_profiles"
+            android:entryValues="@array/spectrum_values"
+            android:key="spectrum"
+            android:summary="@string/spectrum_summary"
+            android:icon="@drawable/ic_spectrum" 
+            android:title="@string/spectrum_title" />
+    </PreferenceCategory>
+>>>>>>> dc8b1b0... msm8953-common: XiaomiParts: Add HAL3|HAL1 Switch button profiles & QS Tiles
 </PreferenceScreen>
