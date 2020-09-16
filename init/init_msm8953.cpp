@@ -42,6 +42,9 @@
 
 using android::base::GetProperty;
 using android::base::SetProperty;
+=======
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
@@ -83,14 +86,34 @@ void check_device()
     }
 }
 
+void property_override(char const prop[], char const value[], bool add = true)
+{
+    auto pi = (prop_info *) __system_property_find(prop);
+
+    if (pi != nullptr) {
+        __system_property_update(pi, value, strlen(value));
+    } else if (add) {
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+    }
+}
+
 void vendor_load_properties()
 {
     check_device();
 
+<<<<<<< HEAD
     SetProperty("dalvik.vm.heapstartsize", heapstartsize);
     SetProperty("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
     SetProperty("dalvik.vm.heapsize", heapsize);
     SetProperty("dalvik.vm.heaptargetutilization", heaptargetutilization);
     SetProperty("dalvik.vm.heapminfree", heapminfree);
     SetProperty("dalvik.vm.heapmaxfree", heapmaxfree);
+=======
+
+    property_override("dalvik.vm.heapstartsize", heapstartsize);
+    property_override("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_override("dalvik.vm.heapsize", heapsize);
+    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    property_override("dalvik.vm.heapminfree", heapminfree);
+>>>>>>> 1bbbcbe... msm8953-common: Adapt libinit to Android 11
 }
