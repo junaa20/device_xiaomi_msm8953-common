@@ -364,6 +364,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     vndk_package \
+    libgui_vendor \
     libstdc++.vendor
 
 PRODUCT_COPY_FILES += \
