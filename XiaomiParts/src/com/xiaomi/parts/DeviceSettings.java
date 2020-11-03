@@ -32,7 +32,7 @@ public class DeviceSettings extends PreferenceFragment implements
 
     private static final String PREF_DEVICE_KCAL = "device_kcal";
 private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
-   
+
     // Vibration override will use bool instead of integer
     public static final String PREF_VIBRATION_OVERRIDE = "vmax_override";
     public static final String PREF_VIBRATION_PATH = "/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi8950@3:qcom,haptics@c000/leds/vibrator/vmax_override";
@@ -62,9 +62,6 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
 
     public static final  String PERF_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
     public static final  String TORCH_YELLOW_BRIGHTNESS_PATH = "/sys/class/leds/led:torch_1/max_brightness";
-    
-    public static final String PREF_CAMERA = "camera";
-    public static final String CAMERA_SYSTEM_PROPERTY = "persist.camera.profile";
 
     private static final String PREF_ENABLE_DIRAC = "dirac_enabled";
     private static final String PREF_HEADSET = "dirac_headset_pref";
@@ -73,10 +70,10 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
     private static Context mContext;
     private SwitchPreference mSelinuxMode;
     private SwitchPreference mSelinuxPersistence;
-    private SecureSettingListPreference mCamera;
+
     private CustomSeekBarPreference mSpeakerGain;
     private CustomSeekBarPreference mEarpieceGain;
-    
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.xiaomi_main, rootKey);
@@ -112,12 +109,6 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));
         fpsInfo.setOnPreferenceChangeListener(this);
-        
-        // HAL3|HAL1 Switch button profiles
-	 mCamera = (SecureSettingListPreference) findPreference(PREF_CAMERA);
-	 mCamera.setValue(FileUtils.getStringProp(CAMERA_SYSTEM_PROPERTY, "0"));
-	 mCamera.setSummary(mCamera.getEntry());
-	 mCamera.setOnPreferenceChangeListener(this);
 
         boolean enhancerEnabled;
         try {
@@ -205,12 +196,6 @@ private static final String AMBIENT_DISPLAY = "ambient_display_gestures";
 
             case PREF_EARPIECE_GAIN:
                 FileUtils.setValue(EARPIECE_GAIN_PATH, (int) value);
-	   
-	    case PREF_CAMERA:
-	         mCamera.setValue((String) value);
-	               mCamera.setSummary(mCamera.getEntry()); 	 
-                 FileUtils.setStringProp(CAMERA_SYSTEM_PROPERTY, (String) value);
-		 break;
 
             case PREF_ENABLE_DIRAC:
                 try {
