@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Camera -->
+    <array name="camera_profiles">
+        <item>@string/camera_hal1_summary</item>
+        <item>@string/camera_hal3_summary</item>
+    </array>
+    <array name="camera_values">
+        <item>0</item>
+        <item>1</item>
+    </array>     
     <!-- kcal -->
     <array name="preset_enteries">
         <item>@string/preset_default</item>
