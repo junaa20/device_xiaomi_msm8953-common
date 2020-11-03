@@ -294,9 +294,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    init.safailnet.rc \
-    init.camera.rc \
-    init.camera.sh
+    init.safailnet.rc 
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
