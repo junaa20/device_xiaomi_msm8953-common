@@ -420,4 +420,8 @@ PRODUCT_COPY_FILES += \
     WfdCommon
 # Xiaomi Parts
 PRODUCT_PACKAGES += \
-    XiaomiParts		    
+    XiaomiParts	
+
+#Gcam 
+PRODUCT_PACKAGES += \
+    GCam
