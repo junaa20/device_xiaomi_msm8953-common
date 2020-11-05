@@ -294,7 +294,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    init.safailnet.rc 
+    init.safailnet.rc \
     init.camera.rc \
     init.camera.sh
 
@@ -416,7 +416,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
 # Wi-Fi Display
-#PRODUCT_BOOT_JARS += \
+PRODUCT_BOOT_JARS += \
     WfdCommon
 # Xiaomi Parts
 PRODUCT_PACKAGES += \
