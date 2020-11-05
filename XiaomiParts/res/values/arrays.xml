@@ -9,35 +9,6 @@
         <item>0</item>
         <item>1</item>
     </string-array>
-    <!-- kcal -->
-    <array name="preset_enteries">
-        <item>@string/preset_default</item>
-        <item>@string/preset_version_1</item>
-        <item>@string/preset_version_2</item>
-        <item>@string/preset_version_3</item>
-        <item>@string/preset_triluminous</item>
-        <item>@string/preset_deep_black_white</item>
-        <item>@string/preset_deep_natural</item>
-        <item>@string/preset_cool_amoled</item>
-        <item>@string/preset_extreme_amoled</item>
-        <item>@string/preset_warm_amoled</item>
-        <item>@string/preset_hybrid_mamba</item>
-        <item>@string/preset_burn_in</item>
-        <item>@string/preset_sir_banger</item>
-        <item>@string/preset_gerard_extrem_cool</item>
-        <item>@string/preset_yoyoz808</item>
-        <item>@string/preset_purian</item>
-        <item>@string/preset_deep_black_colorful</item>
-        <item>@string/preset_vomer_deep_rich</item>
-        <item>@string/preset_franco</item>
-        <item>@string/preset_wrinklefree_cool</item>
-        <item>@string/preset_harley_tech</item>
-        <item>@string/preset_perfection</item>
-        <item>@string/preset_banged_up</item>
-        <item>@string/preset_sim_cooler</item>
-        <item>@string/preset_obsanity</item>
-        <item>@string/preset_obsanity_ips</item>
-    </array>
 
 
     <!-- Values for Dirac headset pref -->
