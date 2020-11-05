@@ -423,3 +423,7 @@ PRODUCT_PACKAGES += \
 #Gcam 
 PRODUCT_PACKAGES += \
     GCam
+
+# OnePlus Gallery
+PRODUCT_PACKAGES += \
+    OnePlusGallery		    
