@@ -122,6 +122,11 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor    
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl \
+    android.hardware.health@2.0-service
+
 # Configstore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service
